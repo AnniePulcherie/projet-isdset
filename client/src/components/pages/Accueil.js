@@ -75,9 +75,9 @@ const Accueil = () => {
                 </div>
             </section> 
             <div className="filiere-Accueil"></div>
-            <section>
-            <h1> Filières</h1>
-            <div><ListeFiliere /></div>
+            <section className="contente-filiere">
+                <h1> Filières</h1>
+                <div><ListeFiliere /></div>
             
             </section>
             
