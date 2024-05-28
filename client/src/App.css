@@ -1,0 +1,954 @@
+
+  .content{
+	display: flex;
+	flex-direction: row;
+  }
+ 
+  .liste-items :hover{
+	color: #52BE80 !important;
+  }
+  button-navbar-toggler, .collapsed{
+	background-color: white !important;
+	
+  }
+  
+  .active{
+	color: white !important;
+	background-color: #2E86C1 !important;
+  }
+  
+  .brand, .liste-items{
+	color: #2E86C1 !important;
+	background-color: white !important;
+  }
+  
+  Container{
+	display: flex !important;
+	justify-content: space-between !important;
+  }
+  
+
+
+.sectionTitre .articleTitre h3{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	
+}
+
+
+.sectionTitre .articleTitre h1{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 2.5em ;
+	margin-bottom: 0;
+	font-weight:1.5em ;
+	
+	overflow: hidden;
+}
+
+/* header{
+	height: 100px;
+	
+} */
+.menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+	color: white !important;
+	overflow: hidden;
+	background: blue;
+	
+}
+
+.navColor{
+	
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.myAccueil {
+	background: url('./assets/img/accueil1.png'), rgba(244, 245, 247, 0.945);
+	opacity: 0.7;
+	background-repeat: no-repeat;
+	background-size: 80vh;
+	
+	background-position-x: -100px;
+	background-position-y: 80px;
+	
+  }
+/* CSS pour masquer le sidebar par défaut */
+.sidebar {
+	transform: translateX(0);
+  }
+  
+  /* CSS pour afficher le sidebar lorsque l'état est ouvert */
+  .sidebar-open  {
+	transform: translateX(-100%);
+  }
+  #main{
+	transform: translateX(0);
+  }
+  
+  #mainy{
+	margin-left: 0;
+  }
+  .styleFooter{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	padding-top: 30px;
+	background-color: rgba(4, 30, 107, 0.199);
+	color: rgb(4, 4, 4);
+	justify-content: space-around;
+	justify-content: flex-start;
+	
+	
+	
+}
+.mycontainer{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: relative;
+	text-align: left;
+	align-items: flex-start;
+	font-size: .7rem;
+}
+.contact{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: .7rem;
+
+}
+.contact div{
+	display: flex;
+	flex-direction: row;
+	
+}
+.item p{
+	padding-left: 20px;
+}
+nav{
+	
+	width: 100%;	
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+	
+	left: 160px;
+	padding-bottom: 70px;
+}
+nav ul{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin: 0px;
+	padding: 0px;
+}
+nav li{
+	list-style-type: none;
+	float: left;
+}
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	
+	text-transform: uppercase;
+	font-size: 13px !important;
+	margin-left: 5px !important;
+}
+.login{
+	background: #8e0412;
+	margin-right: 20px;
+	border: solid 5px rgb(243, 223, 10);
+	border-radius: 30px;
+	color: white;
+	transition: all 1.5s ease-in-out;
+	margin :5px;
+	padding: 5px;
+	
+
+}
+.login:hover{
+	background: white;
+	transition: background 0.3s ease-out;
+	color: #0d6efd;
+}
+.table{
+	display: table;
+	margin: 0 auto;
+}
+
+.logos{
+	position: absolute;
+	left: 1%;
+	top: -25px;
+	z-index: 1;
+	
+}
+.logoISDset{
+	width: 7rem;
+	border-radius: 50%;
+	
+	
+}
+.liens{
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding-right: 100px;
+	width: 100%;
+}
+
+.menu-log{
+	position :relative;
+	margin: 10px;
+	text-align: center;
+	align-items: center;	
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	font-size: 10px;
+	font-weight: 20px;
+	border: 5px solid #930312;
+	border-radius: 30px;
+	text-align: center;
+	align-items: center;
+	
+}
+.menu-logout{
+	width: 40px;
+	height: 40px;
+}
+.right button{
+	outline: none;
+	border: none;
+	background: #8e0412;
+	border-radius: 20px;
+	color: white;
+	margin-left: 10px;
+	
+}
+.right button:hover{
+	color: rgb(4, 4, 113);
+	background:rgb(243, 223, 10);
+}
+.right button a{
+	color: white;
+}
+h1,h2,h3,h4,h5{
+	overflow: hidden;
+}
+.right {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-self: center;
+	align-items: center;
+}
+.right menu-log:hover{
+	cursor: pointer;
+	background: royalblue;
+	color: white !important;
+}
+.menu-txt:hover{
+border-top: 5px solid;
+
+background: white;
+/* background: rgba(211, 224, 37, 0.15); */
+
+}
+
+
+
+.makeCenter{
+	left: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.colone{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+
+.grille{
+	width: 30%;
+	margin: 15px;
+}
+
+/* nav li:hover a{
+	padding: 15px 30px 20px 30px;
+} */
+@media screen and (max-width: 780px){
+
+	/* .myAccueil {
+		background: rgba(112, 194, 245, 0.112);
+		background-image:none;
+	  } */
+	header{
+		height: 50px;
+	}
+	h1{
+		font-size: 1.7rem !important;
+		margin: 20px 0px 0px 0px;
+	}
+	nav li a{
+		font-size: 12px;
+		padding: 10px;
+	}
+	nav li:hover a{
+		padding: 5px 10px 10px 10px;
+	}
+	.liens{
+		flex-direction: column;
+	}
+	.liens ul, .right{
+		flex-direction:column;
+	}
+	
+	.menu{
+		
+		flex-direction: column;
+		height: 60vh;
+	}
+	.menu-menu{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.autre-logo{
+		display: none;
+	}
+}
+
+
+/* Accueil */
+
+
+
+.sectionTitre{
+	height: 40vh;
+	position :relative;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around ;
+	align-items: center;
+	text-align: center;
+	
+}
+
+.autre-logo{
+	position: absolute;
+	right: 0;
+	top: 100px;
+	min-width: 50px;
+	max-width: 160px;
+	width: 18%;
+}
+.articleTitre{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/* .articleTitre h1{
+	display: block;
+	font-size: 2.1em !important;
+	margin-bottom: 0;
+    line-height: 1.2 !important;
+    margin-block-start: 0.15em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 1000 !important;
+	overflow-y: hidden;
+
+} */
+/* .articleTitre h3{
+	overflow-y: hidden;
+	font-weight: 600;
+} */
+.slogan{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* .slogan p:nth-child(2){
+	color:rgba(0, 0, 255, 0.932);
+	font-size: larger;
+	font-weight: 200;
+} */
+.main-Accueil{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+}
+.section2{
+	align-items: center;
+	width: 70%;
+	height: 40vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	
+	
+}
+
+.format{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.format li{
+	width: 200px;
+	height: 50px;
+	color: white;
+	background: #ffc107;
+	border-radius: 10px;
+	text-align: center;
+	margin: 10px;
+	padding-top: 15px;
+}
+
+.slogan .big{
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.createCompte{
+	position:relative;
+	width: 100%;
+	height: 100vh;
+	padding-top: 100px;
+	
+}
+
+.connexion{
+	width: 70%;
+	height: 100%;
+	background: #063666;
+}
+.rechercher{
+	align-items: center;
+	width: 70%;
+	min-width: 150px;
+	max-width: 400px;
+}
+
+.mybtn{
+	width: 75%;
+	height: 50px;
+	background-color: #8e0412;
+	color: white;
+	border-radius: 30px;
+	outline-style: none;
+	
+}
+
+
+
+.mybtn:hover{
+	background: royalblue;
+}
+.mySearch{
+	width: 40%;
+	
+	
+	/* background-color: rgba(65, 105, 225, 0.125);
+	border-top-left-radius: 50% 100px; Courbure supérieure gauche */
+    /* border-top-right-radius: 50% 100px; */
+}
+
+.inputRecherche{
+	width: 80%;
+	height: 50px;
+	outline: none;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	padding: 20px;
+}
+
+.btnChercher{
+	width: 50px;
+	height: 50px;
+	background-color: #8e0412;
+	color: white;
+	border-bottom-right-radius: 30px;
+	border-top-right-radius: 30px;
+	border: none;
+	
+}
+
+
+.lesInput{
+	width: 60%;
+}
+
+/* formulaire */
+.formulaire{
+	width: 100%;
+	position: relative;
+    display: flex;
+    justify-content: center;
+	
+}
+.formulaire .mybtn{
+	position: relative;
+	justify-content: center !;
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.bodyForme{
+	width: 40%;
+}
+
+.espace{
+	margin-right: 10px !important;
+}
+
+.fermer:hover{
+	cursor: pointer;
+}
+
+.cacher{
+	display: none;
+	transition: all 1;
+}
+
+header {
+	overflow: hidden;
+}
+
+.none{
+	left:-300px;
+}
+.error-message{
+	color: red;
+}
+
+.bouton{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.section-inscription{
+	padding-top: 50px;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+ .section-inscription section{
+	width: 100%;
+ }
+
+ /* CSS pour les petits écrans (par exemple, jusqu'à 768px de large) */
+ @media (max-width:950px) {
+	.section2, .rechercher{
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		font-size: 15px;
+
+	}
+	.show{
+		position: relative;
+		height: 100%;
+		z-index: 1;
+	}
+	nav{
+		height: 60vh;
+		z-index: 1;
+	}
+	nav ul{
+		flex-direction: column;
+		
+	}
+
+	.rechercher .mybtn{
+		
+		margin-top: 20px;
+	}
+ }
+ @media (max-width: 600px) {
+	.menu{
+		height: 100%;
+		flex-direction: column;
+	}
+	.menu-menu{
+		flex-direction:column;
+	}
+	.section2, .rechercher{
+		display: none;
+		/* width: 100%;
+		position: relative;
+		
+		flex-direction: column;
+		font-size: 15px; */
+
+	}
+	
+	.logos img{
+		width: 100px;
+		height: 100px;
+	}
+	h1{
+		font-size: 18px;
+	}
+	h2{
+		font-size: 15px;
+	}
+	h3{
+		font-size: 15px;
+	}
+	.mySearch{
+		position: relative;
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+	
+
+	.lesInput{
+		width: 90%;
+		
+	}
+	
+	
+	.rechercher .mybtn{
+		width: 80%;
+		height: 50px;
+		margin-top: 20px;
+	}
+	.articleTitre h1 {
+	  font-size: 2rem; /* Définissez la taille de la police souhaitée pour les petits écrans */
+	}
+	.articleTitre h3 {
+	  font-size: 1.2rem; /* Définissez la taille de la police souhaitée pour les petits écrans */
+	}
+	.slogan {
+	  font-size: .9rem; /* Définissez la taille de la police souhaitée pour les petits écrans */
+	}
+  }
+  
+  /* CSS pour les écrans moyens et grands */
+  /* @media (min-width: 769px) {
+	.articleTitre h1 {
+	  font-size: 36px; /* Définissez la taille de la police souhaitée pour les écrans moyens et grands 
+	}
+	.articleTitre h3 {
+	  font-size: 24px; /* Définissez la taille de la police souhaitée pour les écrans moyens et grands 
+	}
+	.slogan {
+	  font-size: 18px; /* Définissez la taille de la police souhaitée pour les écrans moyens et grands 
+	}
+  }
+   */
+  .serch{
+	display :flex;
+	flex-direction: row;
+	justify-content: space-around;
+  }
+  main{
+	padding-top: 150px;
+	min-height: 60vh;
+	
+  }
+  .detail{
+	height:100vh;
+  }
+  .styleCard{
+	width: '80%';
+    height: '100vh';
+    margin: '0 auto';
+    display: 'flex';
+    flex-direction: 'column';
+    justify-content: 'center';
+    position: 'relative';
+  }
+
+  p{
+	text-align: justify;
+  }
+  .card-body{
+	justify-content: space-between;
+  }
+  .fleche{
+	margin-left: 10px;
+  }
+  .navbar-nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+  }
+.centrer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/* Paiement.css */
+.paiement{
+	position: relative;
+	width: 100%;
+	min-height: 75vh;
+}
+.paiementMode{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.droitePaiement{
+	
+	/* width: 40%; */
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding-right: 50px;
+	
+}
+.droitePaiement div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.droitePaiement div button{
+	margin: 10px;
+	border-radius:10px  ;	
+}
+
+.boutonPaiement{
+	border: 5px solid #0d6efd;
+	border-radius:10px  ;
+	border-top-right-radius: 10px;
+	background-color: white;
+}
+
+.boutonPaiement:hover{
+	background: #0d6efd;
+	color: white;
+	
+}
+.gauchePaiment{
+	/* width: 40%; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: #20039319;
+	padding: 0 15px 0 15px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px gray;
+	margin-bottom: 10px;
+
+	
+}
+.formulairePayement{
+	margin-left:10px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+  /* .row {
+	border-left: 2px solid #000; /* Couleur de la ligne verticale 
+  } */
+
+
+
+  .password-input-wrapper {
+	position: relative;
+  }
+  .password-input button {
+	position: absolute;
+	top: 50%;
+	right: 5px; /* Ajustez ceci pour ajuster la position de l'icône */
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+  /* profile =========================================*/
+  .section-profil{
+	display: flex;
+	justify-content: space-around;
+	background: rgba(235, 230, 230, 0.909);
+	align-items: center;
+	color: black;
+	height: 80vh;
+	width: 100%;
+  }
+  .vertical-line {
+	align-items: center;justify-content: center;
+	border-left: 5px solid white;
+	height: 50%;
+  }
+  
+  .section-profil p span{
+	margin: 20px; /* Espace entre les paragraphes */
+	text-transform: uppercase;
+	font-weight: bold;
+  }
+  .section-profil section{
+	margin-left: 50px;
+  }
+  .sary{
+	width: 100%;
+	position:relative;
+	text-align: center;
+	align-items: center;
+	
+  }
+  .edit-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5px 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  }
+  
+  .sary:hover .edit-button {
+	opacity: 1;
+  }
+  li .span{
+	margin-left: 15px;
+  }
+  .sary img{
+	border-radius: 50%;
+  }
+  
+  .module{
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+  }
+  .formationDetails{
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+  }
+
+ 
+
+  .boutonFiliere{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+	text-align: center;
+	align-items: center;
+  }
+
+  .formationApayer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:flex-end;
+	
+  }
+
+  .formationApayer button{
+	margin: 20px;
+	width: 200px;
+	text-transform: center;
+	align-items: center;
+  }
+
+  @media screen and (max-width:700px){
+	.sidebar{
+		background-color: rgba(0,0,0, 0.3);
+	}
+	.myAccueil{
+		background-size: 500px;
+		
+	}
+
+  }
+
+  @media  screen and (max-width:400px){
+	/* .myAccueil{
+		background-position-x: 10px;
+		background-position-y: 200px;
+		background-size: 100%;
+	} */
+	.logoISDset{
+		width: 25vw;
+	}
+	main{
+		padding-top: 75px;
+		font-weight: bolder;
+	}
+	.sectionTitre{
+		margin-left: 20px;
+	}
+	.articleTitre{
+		font-size: .8rem;
+		align-items: start;
+	}
+  }
+
+/* liste filiere accueil */
+.listeFiliere{
+	background:white;
+	width:100%;
+	
+}
+
+.listeFiliere::before{
+	content: '';
+	background-color: white;
+	width: 100%;
+	height: 50px;
+	box-shadow: 5px 10px #063666;
+}
