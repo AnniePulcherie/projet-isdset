@@ -1,0 +1,23 @@
+:root {
+    --firebase-bg-color: #1a73e8;
+    --firebase-header-color: #424242;
+    --firebase-body-color: #757575;
+    --firebase-button-bg-color: #1a73e8;
+    --firebase-button-bg-hover-color: #1967d2;
+    --firebase-button-text-color: #fff;
+    --firebase-button-white-text-color: #1a73e8;
+    --firebase-button-white-hover-color: #e8f0fe;
+    --firebase-link-color: #1e88e5;
+    --firebase-link-hover-color: #1a73e8;
+    --firebase-link-bg-hover-color: #e8f0fe;
+    --firebase-card-bg-color: #fff;
+    --firebase-border-color: #dadce0;
+    --firebase-hr-color: #cfd8dc;
+    --firebase-product-text-color: #202124;
+    --firebase-product-link-color: #1967d2;
+    --firebase-product-card-bg-color: #f8f9fa;
+    --firebase-product-card-hover-color: #d2e3fc;
+    --firebase-product-feature-color: #0e4c97;
+    --firebase-pricing-header-color: #424242;
+    --firebase-pricing-body-color: #757575;
+}

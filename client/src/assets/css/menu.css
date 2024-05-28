@@ -1,0 +1,8 @@
+.menu .active{
+	font-weight: bold;
+	color: #0a1cbf;
+	border-bottom: 8px solid #8e0412;
+	border-bottom-left-radius: 20%;
+	border-bottom-right-radius: 20%;
+	
+}
