@@ -1,8 +1,15 @@
 const Seq = require('sequelize');
 
-const sequelize = new Seq('isdset','root','',{
-    host:'localhost',
-    dialect:'mysql'
-});
+const isdset = process.env.MYSQLDATABASE;
+console.log(isdset);
+const sequelize = new Seq(process.env.MYSQLDATABASE, process.env.MYSQLUSER, process.env.MYSQLPASSWORD, {
+    host: process.env.MYSQLHOST,
+    port: process.env.MYSQLPORT || 3306,
+    dialect: 'mysql',
+    logging: console.log,
+    dialectOptions: {
+        connectTimeout: 10000
+    }
+  });
 
 module.exports = sequelize;

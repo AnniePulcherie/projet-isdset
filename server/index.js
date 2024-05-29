@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const sequelize = require('./config/config.js');
 const cors = require('cors');
@@ -30,7 +31,7 @@ const routerUploads = require('./routes/uploads.js');
 const { verification } = require('./controllers/verificationPaiement.js');
 const app = express();
 
-require('dotenv').config();
+
 
 const corsOptions = {
   origin: 'http://localhost:3000', // Autorise uniquement ce domaine à accéder à l'API
@@ -39,7 +40,6 @@ const corsOptions = {
   optionsSuccessStatus: 204, // Retourne un statut 204 pour les pré-vérifications (OPTIONS)
   allowedHeaders : ['Content-Type', 'multiform/form-data', 'application/json'],
 };
-
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) =>{
