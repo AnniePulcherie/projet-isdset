@@ -70,6 +70,9 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false } // Mettre à true si vous utilisez HTTPS
 }));
+app.get('/', (req, res) => {
+  res.send('Bonjour, le serveur fonctionne correctement !'); // Réponse simple pour la racine de l'URL
+});
 
 app.use('/user',router);
 app.use('/etudiant', routerEtudiant);
