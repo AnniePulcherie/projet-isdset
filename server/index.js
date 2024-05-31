@@ -7,6 +7,7 @@ const routeFormation = require('./routes/formation-routes.js');
 const router = require('./routes/auth');
 const routeFiliere = require('./routes/filiere-routes');
 const passport = require('passport');
+const session = require('express-session');
 const moduleRoute = require('./routes/module-routes.js');
 const routeCursus = require('./routes/cursus-route.js');
 const inscriptionRouter = require('./routes/inscription-route.js');
@@ -41,6 +42,8 @@ const corsOptions = {
   allowedHeaders : ['Content-Type', 'multiform/form-data', 'application/json'],
 };
 
+
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) =>{
     cb(null, './uploads'); // Le dossier où les fichiers téléchargés seront stockés
@@ -58,6 +61,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const imagesFolder = path.join(__dirname, './uploads');
 app.use('/images', express.static(imagesFolder));
+
+// configuration de express-session
+
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'my_secret_key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false } // Mettre à true si vous utilisez HTTPS
+}));
 
 app.use('/user',router);
 app.use('/etudiant', routerEtudiant);
