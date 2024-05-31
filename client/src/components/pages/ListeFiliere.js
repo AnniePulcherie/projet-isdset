@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const ListeFiliere = () => {
     const [filieres, setFilieres] = useState([]);
@@ -9,7 +9,7 @@ const ListeFiliere = () => {
         // Chargez la liste des filières depuis l'API (par exemple, une API REST)
         async function fetchFilieres() {
           try {
-            const response = await axios.get('http://localhost:3001/filiere');
+            const response = await axios.get(`${apiURL}filiere`);
             setFilieres(response.data);
           } catch (error) {
             console.error('Erreur lors du chargement des filières :', error);
