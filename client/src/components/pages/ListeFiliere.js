@@ -38,7 +38,7 @@ const ListeFiliere = () => {
                 </Card>
             </div>
             ))}
-        </div> 
+           </div> 
         </div>
     );
 };

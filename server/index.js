@@ -84,7 +84,7 @@ app.use('/uploads', routerUploads);
 app.get('/verification/:id', verification);
 app.use(passport.initialize());
 app.use(passport.session());
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.MYSQLPORT || 3001;
 
 sequelize
 .authenticate()
