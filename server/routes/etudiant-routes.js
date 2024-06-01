@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
   
   const upload = multer({storage: storage});
 // Créer un nouvel étudiant
-app.post('/', upload.fields([{name: 'cin'},{name :'diplome'}]), etudiant.creerEtudiant);
+routerEtudiant.post('/', upload.fields([{name: 'cin'},{name :'diplome'}]), etudiant.creerEtudiant);
 // routerEtudiant.post('/',upload.fields(fileFields), etudiant.creerEtudiant);
 routerEtudiant.get('/user/:id', etudiant.etudiantByUser);
 // Mettre à jour un étudiant existant par son ID
