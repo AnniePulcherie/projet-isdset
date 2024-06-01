@@ -4,10 +4,10 @@ const etudiant = require('../controllers/Etudiant');
 const multer = require('multer');
 // const upload = require('../middleware/multer');
 
-// const fileFields = [
-//     {name: 'cin'},
-//     {name: 'diplome' }
-// ];
+const fileFields = [
+    {name: 'cin'},
+    {name: 'diplome' }
+];
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
       cb(null, './uploads'); // Le dossier où les fichiers téléchargés seront stockés
