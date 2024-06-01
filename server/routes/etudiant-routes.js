@@ -1,6 +1,7 @@
 const express = require('express');
 const routerEtudiant = express.Router();
 const etudiant = require('../controllers/Etudiant');
+const multer = require('multer');
 // const upload = require('../middleware/multer');
 
 // const fileFields = [
