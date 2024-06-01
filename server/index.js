@@ -42,7 +42,7 @@ const corsOptions = {
   allowedHeaders : ['Content-Type', 'multiform/form-data', 'application/json'],
 };
 
-
+//configuration de multer
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) =>{
@@ -54,7 +54,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({storage: storage});
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
