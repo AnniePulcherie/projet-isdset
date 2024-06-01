@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
   res.send('Bonjour, le serveur fonctionne correctement !'); // Réponse simple pour la racine de l'URL
 });
 
-// app.post('/etudiant', upload.fields([{name: 'cin'},{name :'diplome'}]), creerEtudiant);
+app.post('/etudiant/', upload.fields([{name: 'cin'},{name :'diplome'}]), creerEtudiant);
 app.post('/module/',upload.fields([{name: 'cours'},{name :'exercice'}]), createModule);
 app.post('/filiere/', upload.single('image'), createFiliere);
 app.put('/filiere/:id', upload.fields([{name:'image'}]), updateFiliere);

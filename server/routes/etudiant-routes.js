@@ -8,7 +8,7 @@ const fileFields = [
     {name: 'diplome' }
 ];
 // Créer un nouvel étudiant
-routerEtudiant.post('/',upload.fields(fileFields), etudiant.creerEtudiant);
+// routerEtudiant.post('/',upload.fields(fileFields), etudiant.creerEtudiant);
 routerEtudiant.get('/user/:id', etudiant.etudiantByUser);
 // Mettre à jour un étudiant existant par son ID
 routerEtudiant.put('/:id',upload.fields(fileFields), etudiant.modifierEtudiant);
