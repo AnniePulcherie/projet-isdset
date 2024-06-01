@@ -35,7 +35,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Autorise uniquement ce domaine à accéder à l'API
+  origin: process.env.CLIENT_URL, // Autorise uniquement ce domaine à accéder à l'API
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Autorise les cookies et les en-têtes d'authentification
   optionsSuccessStatus: 204, // Retourne un statut 204 pour les pré-vérifications (OPTIONS)
