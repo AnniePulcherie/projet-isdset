@@ -74,12 +74,12 @@ app.get('/', (req, res) => {
   res.send('Bonjour, le serveur fonctionne correctement !'); // Réponse simple pour la racine de l'URL
 });
 
-app.use('/user',router);
-app.use('/etudiant', routerEtudiant);
-app.post('/etudiant/', upload.fields([{name: 'cin'},{name :'diplome'}]), creerEtudiant);
+app.post('/etudiant/', upload.fields([{name: 'cin'},{name :'diplome'}]), (res, req)=>console.log('on est ici dans le fichier'));
 app.post('/module/',upload.fields([{name: 'cours'},{name :'exercice'}]), createModule);
 app.post('/filiere/', upload.single('image'), createFiliere);
 app.put('/filiere/:id', upload.fields([{name:'image'}]), updateFiliere);
+app.use('/user',router);
+app.use('/etudiant', routerEtudiant);
 app.use('/formation',routeFormation);
 app.use('/inscription', inscriptionModulaire); //inscriptionFormation
 app.use('/inscriptionModulaire', inscriptionRouter); //inscription modulaire
