@@ -104,11 +104,14 @@ const PORT = process.env.MYSQLPORT || 3001;
 sequelize
 .authenticate()
 .then(()=>{
+  console.log("création des tables effectué");
+  return sequelize.sync();
+}).then(()=>{
   app.listen(PORT, () => {
-    sequelize.sync({force: true});
+    
     console.log(`Serveur en écoute sur le port ${PORT}`);
   });
-  })
+})
 .catch((error)=>{
     console.log("presence de probleme dans connexion: ", error);
-  });
+});
