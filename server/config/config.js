@@ -8,7 +8,7 @@ const sequelize = new Seq(process.env.MYSQLDATABASE, process.env.MYSQLUSER, proc
     port: process.env.MYSQLPORT || 3306,
     dialect: 'mysql',
     dialectModule: require('mysql2'),
-    logging: false,
+    logging: console.log,
     dialectOptions: {
         connectTimeout: 10000
     }
