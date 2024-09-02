@@ -434,14 +434,14 @@ Examen.belongsTo(Module);
 Users.hasMany(Examen);
 Module.hasMany(Examen);
 
- async () => {
-  try {
-    await sequelize.sync({force:true});
-    console.log('Tables créées avec succès');
-  } catch (erreur) {
-    console.error('Erreur lors de la création des tables :', erreur);
-  }
-};
+//  async () => {
+//   try {
+//     await sequelize.sync({force:true});
+//     console.log('Tables créées avec succès');
+//   } catch (erreur) {
+//     console.error('Erreur lors de la création des tables :', erreur);
+//   }
+// };
 
 module.exports = {
   Formation,
