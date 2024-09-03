@@ -4,7 +4,8 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid'); // Pour générer des noms de fichiers uniques
 
 // Initialisation de Firebase Admin SDK
-const serviceAccount = require('../formation-573d3-firebase-adminsdk-iweqb-383a807c48.json.json'); // Chemin vers le fichier de clé de compte de service
+
+const serviceAccount = process.env.SERVICE_ACCOUNT_KEY; // Chemin vers le fichier de clé de compte de service
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
