@@ -22,6 +22,7 @@ const routePaiementRecu = require('./routes/routePaiementRecu.js');
 const path = require('path');
 const routerEtudiant = require('./routes/etudiant-routes.js');
 //const upload = require('./middleware/multer.js');
+const admin = require('firebase-admin');
 const { creerEtudiant } = require('./controllers/Etudiant.js');
 const multer = require('multer');
 const { createFiliere, updateFiliere } = require('./controllers/filiereController.js');
@@ -30,6 +31,7 @@ const etudiantFiliereR = require('./routes/inscription-intensive.js');
 const { createModule } = require('./controllers/moduleController.js');
 const routerUploads = require('./routes/uploads.js');
 const { verification } = require('./controllers/verificationPaiement.js');
+const { uploadToFirebase } = require('./middleware/multer.js');
 const app = express();
 
 
@@ -42,25 +44,12 @@ const corsOptions = {
   allowedHeaders : ['Content-Type', 'multiform/form-data', 'application/json'],
 };
 
-//configuration de multer
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) =>{
-    cb(null, './uploads'); // Le dossier où les fichiers téléchargés seront stockés
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname); // Conservez le nom d'origine du fichier
-  },
-});
-
-const upload = multer({storage: storage});
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const imagesFolder = path.join(__dirname, './uploads');
-// app.use('/images', express.static(imagesFolder));
 
 // configuration de express-session
 
@@ -74,10 +63,10 @@ app.get('/', (req, res) => {
   res.send('Bonjour, le serveur fonctionne correctement !'); // Réponse simple pour la racine de l'URL
 });
 
-app.post('/etudiant/', upload.fields([{name: 'cin'},{name :'diplome'}]), creerEtudiant);
-app.post('/module/',upload.fields([{name: 'cours'},{name :'exercice'}]), createModule);
-app.post('/filiere/', upload.single('image'), createFiliere);
-app.put('/filiere/:id', upload.fields([{name:'image'}]), updateFiliere);
+app.post('/etudiant/', upload.fields([{name: 'cin'},{name :'diplome'}]), uploadToFirebase, creerEtudiant);
+app.post('/module/',upload.fields([{name: 'cours'},{name :'exercice'}]), uploadToFirebase, createModule);
+app.post('/filiere/', upload.single('image'), uploadToFirebase, createFiliere);
+app.put('/filiere/:id', upload.fields([{name:'image'}]), uploadToFirebase, updateFiliere);
 app.use('/user',router);
 app.use('/etudiant', routerEtudiant);
 app.use('/formation',routeFormation);
