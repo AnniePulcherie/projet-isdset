@@ -9,7 +9,7 @@ const serviceAccount = process.env.SERVICE_ACCOUNT_KEY; // Chemin vers le fichie
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: 'formation-573d3.appspot.com', 
+  storageBucket: process.env.STORAGE_BUCKET, 
 });
 
 // Récupération de la référence du bucket
@@ -51,7 +51,7 @@ const uploadToFirebase = async (req, res, next) => {
   blobStream.on('finish', () => {
     // Le fichier a été téléchargé avec succès
     blob.makePublic().then(() => {
-      req.file.firebaseUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`;
+      req.file.firebaseUrl = `${process.env.SOTORAGE_URL}${bucket.name}/${blob.name}`;
       next();
     });
   });
