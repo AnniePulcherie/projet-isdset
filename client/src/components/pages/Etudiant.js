@@ -52,7 +52,6 @@ const  Etudiant =() =>{
     },
   ];
 
- 
   useEffect(() => {
     if(user){
       setEmail(user.email);
@@ -210,13 +209,13 @@ const  Etudiant =() =>{
                       <div className="row mb-3">
                         <label for="inputNumber" className="col-sm-3 col-form-label">CIN</label>
                         <div className="col-sm-9">
-                          <FileUpload onFileUpload={(url) => setCinURL(url)} /> 
+                        <input type="file" name="cin" onChange={(e)=>{setCinURL(e.target.files[0]);}} /> 
                         </div>
                       </div>
                       <div className="row mb-3">
                         <label for="inputNumber" className="col-sm-3 col-form-label"> Diplome</label>
                         <div className="col-sm-9">
-                          <FileUpload onFileUpload={(url) => setDiplomeURL(url)} /> 
+                          <input type="file" name="diplome" onChange={(e)=>setDiplomeURL(e.target.files[0])}/>
                         </div>
                       </div>
 
