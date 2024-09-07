@@ -8,7 +8,7 @@ if (!process.env.SERVICE_ACCOUNT_KEY) {
   throw new Error('La variable d\'environnement FIREBASE_SERVICE_ACCOUNT_JSON est manquante');
 }
 
-const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_KEY); // Chemin vers le fichier de clé de compte de service
+const serviceAccount = process.env.SERVICE_ACCOUNT_KEY; // Chemin vers le fichier de clé de compte de service
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
