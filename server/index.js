@@ -22,7 +22,7 @@ const routePaiementRecu = require('./routes/routePaiementRecu.js');
 const path = require('path');
 const routerEtudiant = require('./routes/etudiant-routes.js');
 //const upload = require('./middleware/multer.js');
-const admin = require('firebase-admin');
+
 const { creerEtudiant } = require('./controllers/Etudiant.js');
 const multer = require('multer');
 const { createFiliere, updateFiliere } = require('./controllers/filiereController.js');

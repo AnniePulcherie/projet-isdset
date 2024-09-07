@@ -4,8 +4,11 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid'); // Pour générer des noms de fichiers uniques
 
 // Initialisation de Firebase Admin SDK
+if (!process.env.SERVICE_ACCOUNT_KEY) {
+  throw new Error('La variable d\'environnement FIREBASE_SERVICE_ACCOUNT_JSON est manquante');
+}
 
-const serviceAccount = process.env.SERVICE_ACCOUNT_KEY; // Chemin vers le fichier de clé de compte de service
+const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_KEY); // Chemin vers le fichier de clé de compte de service
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -51,9 +54,12 @@ const uploadToFirebase = async (req, res, next) => {
   blobStream.on('finish', () => {
     // Le fichier a été téléchargé avec succès
     blob.makePublic().then(() => {
-      req.file.firebaseUrl = `${process.env.SOTORAGE_URL}${bucket.name}/${blob.name}`;
+      req.file.firebaseUrl = `${process.env.STORAGE_URL}${bucket.name}/${blob.name}`;
       next();
+    }).catch((err) => {
+      return res.status(500).send({ error: 'Error making file public.' });
     });
+    
   });
 
   blobStream.end(req.file.buffer);
